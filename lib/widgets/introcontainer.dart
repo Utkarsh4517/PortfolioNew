@@ -7,18 +7,15 @@ class IntroContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     double minWidth = 500;
-    if( screenWidth < 540){
-      minWidth = screenWidth * 0.9;
-    }
 
-    return Container(
-      constraints:  BoxConstraints(
-        minWidth: minWidth
+    return Expanded(
+      child: Container(
+        constraints: BoxConstraints(minWidth: minWidth),
+        width: MediaQuery.of(context).size.width * 0.375,
+        height: 500,
+        decoration: BoxDecoration(
+            color: Colors.amberAccent, borderRadius: BorderRadius.circular(20)),
       ),
-      width: MediaQuery.of(context).size.width*0.375,
-      height: 500,
-      decoration: BoxDecoration(
-          color: Colors.amberAccent, borderRadius: BorderRadius.circular(20)),
     );
   }
 }

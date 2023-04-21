@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newportfolio/widgets/introcontainer.dart';
+import 'package:newportfolio/widgets/profilecontainer.dart';
 import 'package:newportfolio/widgets/textbutton.dart';
 
 class HomePage extends StatelessWidget {
@@ -67,9 +68,11 @@ class HomePage extends StatelessWidget {
                   children: [
                     const SizedBox(height: 15,),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
                         IntroContainer(),
+                        SizedBox(width: 10,),
+                        ProfileContainer()
                       ],
                     )
                   ],
