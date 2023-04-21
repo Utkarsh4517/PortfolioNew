@@ -14,7 +14,8 @@ class HomePage extends StatelessWidget {
         child: Align(
           alignment: const AlignmentDirectional(0, 0),
           child: Container(
-            width: 1200,
+            margin: const EdgeInsets.symmetric(horizontal: 20),
+            width: 1050,
             decoration: const BoxDecoration(color: Colors.white),
             child: Column(
               mainAxisSize: MainAxisSize.max,
@@ -64,6 +65,7 @@ class HomePage extends StatelessWidget {
                 // END OF TOP ROW
                 Column(
                   children: [
+                    const SizedBox(height: 15,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
