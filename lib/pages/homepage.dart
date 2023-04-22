@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newportfolio/widgets/introcontainer.dart';
 import 'package:newportfolio/widgets/profilecontainer.dart';
+import 'package:newportfolio/widgets/projectcontainer.dart';
 import 'package:newportfolio/widgets/textbutton.dart';
 
 class HomePage extends StatelessWidget {
@@ -70,6 +71,7 @@ class HomePage extends StatelessWidget {
                     const SizedBox(
                       height: 15,
                     ),
+                    // INTRO AND PICTURE
                     LayoutBuilder(
                       builder:
                           (BuildContext context, BoxConstraints constraints) {
@@ -91,7 +93,32 @@ class HomePage extends StatelessWidget {
                           );
                         }
                       },
-                    )
+                    ),
+                    // PROJECT SECTION
+                    LayoutBuilder(
+                      builder:
+                          (BuildContext context, BoxConstraints constraints) {
+                        if (constraints.maxWidth < 600) {
+                          return Column(
+                            children: const [
+                              ProjectContainer(),
+                              SizedBox(height: 10,),
+                              ProjectContainer(),
+                              
+                            ],
+                          );
+                        } else {
+                          return Row(
+                            children: const [
+                              ProjectContainer(),
+                              SizedBox(height: 10,),
+                              ProjectContainer(),
+                            ],
+                          );
+                        }
+                      },
+                    ),
+
                   ],
                 ),
               ],
