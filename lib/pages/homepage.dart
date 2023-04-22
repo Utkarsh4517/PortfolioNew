@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:newportfolio/constants/images.dart';
 import 'package:newportfolio/widgets/introcontainer.dart';
 import 'package:newportfolio/widgets/profilecontainer.dart';
 import 'package:newportfolio/widgets/projectcontainer.dart';
 import 'package:newportfolio/widgets/textbutton.dart';
-import 'package:newportfolio/constants/images.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -80,7 +80,7 @@ class HomePage extends StatelessWidget {
                           return Column(
                             children: const [
                               IntroContainer(),
-                              SizedBox(height: 10,),
+                              SizedBox(height: 30,),
                               ProfileContainer(),
                             ],
                           );
@@ -88,7 +88,7 @@ class HomePage extends StatelessWidget {
                           return Row(
                             children: const [
                               IntroContainer(),
-                              SizedBox(width: 10,),
+                              SizedBox(width: 20,),
                               ProfileContainer(),
                             ],
                           );
@@ -100,11 +100,11 @@ class HomePage extends StatelessWidget {
                     LayoutBuilder(
                       builder:
                           (BuildContext context, BoxConstraints constraints) {
-                        if (constraints.maxWidth < 600) {
+                        if (constraints.maxWidth < 700) {
                           return Column(
                             children: const [
                               ProjectContainer(image: brahma,),
-                              SizedBox(height: 20,),
+                              SizedBox(height: 30,),
                               ProjectContainer(image: weather,),
                               
                             ],
@@ -124,11 +124,11 @@ class HomePage extends StatelessWidget {
                     LayoutBuilder(
                       builder:
                           (BuildContext context, BoxConstraints constraints) {
-                        if (constraints.maxWidth < 600) {
+                        if (constraints.maxWidth < 700) {
                           return Column(
                             children: const [
                               ProjectContainer(image: twitter,),
-                              SizedBox(height: 20,),
+                              SizedBox(height: 30,),
                               ProjectContainer(image: ecommerce,),
                               
                             ],

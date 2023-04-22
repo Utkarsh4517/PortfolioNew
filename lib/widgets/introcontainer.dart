@@ -17,7 +17,7 @@ class IntroContainer extends StatelessWidget {
             ),
           )
         : Container(
-            width: MediaQuery.of(context).size.width * 0.9,
+            width: MediaQuery.of(context).size.width * 0.7,
             height: 500,
             decoration: BoxDecoration(
                 color: Colors.amberAccent,

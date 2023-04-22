@@ -11,7 +11,6 @@ class ProjectContainer extends StatefulWidget {
 
 class _ProjectContainerState extends State<ProjectContainer> {
   double scaleFactor = 1.0;
-
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -19,7 +18,7 @@ class _ProjectContainerState extends State<ProjectContainer> {
     return MouseRegion(
       onEnter: (_) {
         setState(() {
-          scaleFactor = 1.05;
+          scaleFactor = 1.1;
         });
       },
       onExit: (_) {
@@ -30,7 +29,17 @@ class _ProjectContainerState extends State<ProjectContainer> {
       child: Transform.scale(
           scale: scaleFactor,
           child: ClipRRect(
-              borderRadius: BorderRadius.circular(20), child: Image.asset(widget.image))),
+            borderRadius: BorderRadius.circular(20),
+            child: screenWidth < 700 ?  Image.asset(
+              widget.image,
+              width:  screenWidth * 0.7 ,
+              height:  screenWidth * 0.7 ,
+            ) : Image.asset(
+              widget.image,
+              width: screenWidth < 1100? screenWidth * 0.45 : 500,
+              height: screenWidth < 1100? screenWidth * 0.45 : 500,
+            ),
+          )),
     );
   }
 }

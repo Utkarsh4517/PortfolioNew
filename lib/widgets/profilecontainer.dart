@@ -12,7 +12,7 @@ class ProfileContainer extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.amberAccent, borderRadius: BorderRadius.circular(20)),
     ) : Container(
-      width: MediaQuery.of(context).size.width * 0.9,
+      width: MediaQuery.of(context).size.width * 0.7,
       height: 500,
       decoration: BoxDecoration(
           color: Colors.amberAccent, borderRadius: BorderRadius.circular(20)),
