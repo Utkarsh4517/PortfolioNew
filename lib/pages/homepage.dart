@@ -4,6 +4,7 @@ import 'package:newportfolio/widgets/introcontainer.dart';
 import 'package:newportfolio/widgets/profilecontainer.dart';
 import 'package:newportfolio/widgets/projectcontainer.dart';
 import 'package:newportfolio/widgets/textbutton.dart';
+import 'package:newportfolio/constants/images.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -18,7 +19,7 @@ class HomePage extends StatelessWidget {
           alignment: const AlignmentDirectional(0, 0),
           child: Container(
             margin: const EdgeInsets.symmetric(horizontal: 20),
-            width: 1050,
+            width: 1030,
             decoration: const BoxDecoration(color: Colors.white),
             child: Column(
               mainAxisSize: MainAxisSize.max,
@@ -94,6 +95,7 @@ class HomePage extends StatelessWidget {
                         }
                       },
                     ),
+                    const SizedBox(height: 20,),
                     // PROJECT SECTION
                     LayoutBuilder(
                       builder:
@@ -101,18 +103,42 @@ class HomePage extends StatelessWidget {
                         if (constraints.maxWidth < 600) {
                           return Column(
                             children: const [
-                              ProjectContainer(),
-                              SizedBox(height: 10,),
-                              ProjectContainer(),
+                              ProjectContainer(image: brahma,),
+                              SizedBox(height: 20,),
+                              ProjectContainer(image: weather,),
                               
                             ],
                           );
                         } else {
                           return Row(
                             children: const [
-                              ProjectContainer(),
-                              SizedBox(height: 10,),
-                              ProjectContainer(),
+                              ProjectContainer(image: brahma,),
+                              SizedBox(width: 30,),
+                              ProjectContainer(image: weather,),
+                            ],
+                          );
+                        }
+                      },
+                    ),
+                    const SizedBox(height: 20,),
+                    LayoutBuilder(
+                      builder:
+                          (BuildContext context, BoxConstraints constraints) {
+                        if (constraints.maxWidth < 600) {
+                          return Column(
+                            children: const [
+                              ProjectContainer(image: twitter,),
+                              SizedBox(height: 20,),
+                              ProjectContainer(image: ecommerce,),
+                              
+                            ],
+                          );
+                        } else {
+                          return Row(
+                            children: const [
+                              ProjectContainer(image: twitter,),
+                              SizedBox(width: 30,),
+                              ProjectContainer(image: ecommerce,),
                             ],
                           );
                         }

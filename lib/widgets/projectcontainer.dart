@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:newportfolio/constants/images.dart';
 
 class ProjectContainer extends StatefulWidget {
-  const ProjectContainer({super.key});
+  final String image;
+  const ProjectContainer({required this.image, super.key});
 
   @override
   State<ProjectContainer> createState() => _ProjectContainerState();
@@ -10,6 +11,7 @@ class ProjectContainer extends StatefulWidget {
 
 class _ProjectContainerState extends State<ProjectContainer> {
   double scaleFactor = 1.0;
+
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -17,7 +19,7 @@ class _ProjectContainerState extends State<ProjectContainer> {
     return MouseRegion(
       onEnter: (_) {
         setState(() {
-          scaleFactor = 1.1;
+          scaleFactor = 1.05;
         });
       },
       onExit: (_) {
@@ -26,12 +28,9 @@ class _ProjectContainerState extends State<ProjectContainer> {
         });
       },
       child: Transform.scale(
-        scale: scaleFactor,
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(20),
-          child: Image.asset(image1, height: 200, width: 400,),
-        )
-      ),
+          scale: scaleFactor,
+          child: ClipRRect(
+              borderRadius: BorderRadius.circular(20), child: Image.asset(widget.image))),
     );
   }
 }
