@@ -32,7 +32,7 @@ class _ProjectContainerState extends State<ProjectContainer> {
       child: Transform.scale(
         scale: scaleFactor,
         child: AnimatedContainer(
-          duration: const Duration(milliseconds: 500),
+          duration: const Duration(milliseconds: 400),
           transform: transform,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),

@@ -12,7 +12,12 @@ class IntroContainer extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 0.375,
               height: 500,
               decoration: BoxDecoration(
-                  color: Colors.amberAccent,
+                  gradient: const LinearGradient(
+                    colors: [Color(0xfff7e4bf), Color(0xf2ebfff8)],
+                    stops: [0, 1],
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                  ),
                   borderRadius: BorderRadius.circular(20)),
             ),
           )
@@ -20,7 +25,12 @@ class IntroContainer extends StatelessWidget {
             width: MediaQuery.of(context).size.width * 0.7,
             height: 500,
             decoration: BoxDecoration(
-                color: Colors.amberAccent,
+                gradient: const LinearGradient(
+                  colors: [Color(0xfff7e4bf), Color(0xf2ebfff8)],
+                  stops: [0, 1],
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                ),
                 borderRadius: BorderRadius.circular(20)),
           );
   }
