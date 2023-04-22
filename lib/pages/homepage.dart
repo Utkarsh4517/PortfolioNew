@@ -3,13 +3,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:newportfolio/widgets/introcontainer.dart';
 import 'package:newportfolio/widgets/profilecontainer.dart';
 import 'package:newportfolio/widgets/textbutton.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -70,26 +70,28 @@ class HomePage extends StatelessWidget {
                     const SizedBox(
                       height: 15,
                     ),
-                    ResponsiveRowColumn(
-                      rowMainAxisAlignment: MainAxisAlignment.center,
-                      rowPadding: const EdgeInsets.all(10),
-                      columnPadding: const EdgeInsets.all(10),
-                      layout:
-                          ResponsiveBreakpoints.of(context).smallerThan(DESKTOP)
-                              ? ResponsiveRowColumnType.COLUMN
-                              : ResponsiveRowColumnType.ROW,
-                      children: const [
-                        ResponsiveRowColumnItem(
-                          columnOrder: 1,
-                          child: IntroContainer(),
-                        ),
-                        ResponsiveRowColumnItem(child: SizedBox(height: 10,width: 10,)),
-                        ResponsiveRowColumnItem(
-                          columnOrder: 1,
-                          child: ProfileContainer(),
-                        ),
-                      ],
-                    ),
+                    LayoutBuilder(
+                      builder:
+                          (BuildContext context, BoxConstraints constraints) {
+                        if (constraints.maxWidth < 600) {
+                          return Column(
+                            children: const [
+                              IntroContainer(),
+                              SizedBox(height: 10,),
+                              ProfileContainer(),
+                            ],
+                          );
+                        } else {
+                          return Row(
+                            children: const [
+                              IntroContainer(),
+                              SizedBox(width: 10,),
+                              ProfileContainer(),
+                            ],
+                          );
+                        }
+                      },
+                    )
                   ],
                 ),
               ],

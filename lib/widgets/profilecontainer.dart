@@ -6,8 +6,13 @@ class ProfileContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    return Container(
+    return screenWidth > 600? Container(
       width: screenWidth < 1200? MediaQuery.of(context).size.width * 0.27 : 330,
+      height: 500,
+      decoration: BoxDecoration(
+          color: Colors.amberAccent, borderRadius: BorderRadius.circular(20)),
+    ) : Container(
+      width: MediaQuery.of(context).size.width * 0.9,
       height: 500,
       decoration: BoxDecoration(
           color: Colors.amberAccent, borderRadius: BorderRadius.circular(20)),

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:newportfolio/pages/homepage.dart';
-import 'package:newportfolio/pages/testpage.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,10 +11,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      
-      home: const TestPage(),
+      home: HomePage(),
     );
   }
 }
