@@ -10,7 +10,7 @@ class IntroContainer extends StatelessWidget {
 
     return Expanded(
       child: Container(
-        constraints: BoxConstraints(minWidth: minWidth),
+        //constraints: BoxConstraints(minWidth: minWidth),
         width: MediaQuery.of(context).size.width * 0.375,
         height: 500,
         decoration: BoxDecoration(
