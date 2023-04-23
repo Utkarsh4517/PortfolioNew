@@ -32,7 +32,7 @@ class IntroContainer extends StatelessWidget {
                     child: Container(
                       width: 600,
                       padding: const EdgeInsets.only(left: 40, right: 10),
-                      child: Text(
+                      child: SelectableText(
                         "Hello, I'm Utkarsh, a passionate Flutter developer and an open-source enthusiast",
                         style: GoogleFonts.roboto(
                           color: Colors.black,
@@ -50,7 +50,7 @@ class IntroContainer extends StatelessWidget {
                     child: Container(
                       width: 700,
                       padding: const EdgeInsets.only(left: 40, right: 10),
-                      child: Text(
+                      child: SelectableText(
                         "I care a lot about using design for positive impact. and enjoy creating user-centric, delightful, and human experiences.",
                         style: GoogleFonts.roboto(
                           color: Colors.black,
@@ -81,7 +81,7 @@ class IntroContainer extends StatelessWidget {
                               borderRadius: BorderRadius.circular(35),
                             ),
                           ),
-                          child: const Text(
+                          child: const SelectableText(
                             'Contact me',
                             style: TextStyle(color: Colors.white),
                           ),
@@ -144,7 +144,7 @@ class IntroContainer extends StatelessWidget {
                   child: Container(
                     width: 600,
                     padding: const EdgeInsets.only(left: 40, right: 10),
-                    child: Text(
+                    child: SelectableText(
                       "Hello, I'm Utkarsh, a passionate Flutter developer and an open-source enthusiast",
                       style: GoogleFonts.roboto(
                         color: Colors.black,
@@ -162,7 +162,7 @@ class IntroContainer extends StatelessWidget {
                   child: Container(
                     width: 700,
                     padding: const EdgeInsets.only(left: 40, right: 10),
-                    child: Text(
+                    child: SelectableText(
                       "I care a lot about using design for positive impact. and enjoy creating user-centric, delightful, and human experiences.",
                       style: GoogleFonts.roboto(
                         color: Colors.black,
@@ -185,7 +185,6 @@ class IntroContainer extends StatelessWidget {
                         children: [
                           ElevatedButton(
                             onPressed: () {launchGmail('shrivastava.utkarsh4517@gmail.com');
-                              launchGmail('shrivastava.utkarsh4517@gmail.com');
                             },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.black,
@@ -196,7 +195,7 @@ class IntroContainer extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(35),
                               ),
                             ),
-                            child: const Text(
+                            child: const SelectableText(
                               'Contact me',
                               style: TextStyle(color: Colors.white),
                             ),

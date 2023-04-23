@@ -67,7 +67,7 @@ class _ProjectContainerState extends State<ProjectContainer> {
                         Positioned(
                           left: 20,
                           top: 20,
-                          child: Text(
+                          child: SelectableText(
                             widget.title,
                             style: GoogleFonts.chivo(
                               color: widget.titleColor,
@@ -79,7 +79,7 @@ class _ProjectContainerState extends State<ProjectContainer> {
                         Positioned(
                           left: 20,
                           top: 50,
-                          child: Text(
+                          child: SelectableText(
                             widget.bodyText,
                             style: GoogleFonts.chivo(
                               color: widget.bodyTextColor,
@@ -100,7 +100,7 @@ class _ProjectContainerState extends State<ProjectContainer> {
                     Positioned(
                       left: 20,
                       top: 20,
-                      child: Text(
+                      child: SelectableText(
                         widget.title,
                         style: GoogleFonts.chivo(
                           color: widget.titleColor,
@@ -112,7 +112,7 @@ class _ProjectContainerState extends State<ProjectContainer> {
                     Positioned(
                       left: 20,
                       top: 50,
-                      child: Text(
+                      child: SelectableText(
                         widget.bodyText,
                         style: GoogleFonts.chivo(
                           color: widget.bodyTextColor,

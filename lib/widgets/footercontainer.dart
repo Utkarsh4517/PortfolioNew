@@ -32,7 +32,7 @@ class Footer extends StatelessWidget {
             child: Container(
               width: 600,
               padding: const EdgeInsets.only(left: 40, right: 10),
-              child: Text(
+              child: SelectableText(
                 "Want to work together?",
                 style: GoogleFonts.roboto(
                   color: Colors.black,
@@ -50,7 +50,7 @@ class Footer extends StatelessWidget {
             child: Container(
               width: 700,
               padding: const EdgeInsets.only(left: 40, right: 10),
-              child: Text(
+              child: SelectableText(
                 "Feel free to reach out for collaborations or just a friendly hello\nshrivastava.utkarsh4517@gmail.com",
                 style: GoogleFonts.roboto(
                   color: Colors.black,

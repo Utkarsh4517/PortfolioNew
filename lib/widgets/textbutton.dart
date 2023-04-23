@@ -9,7 +9,7 @@ class CustomTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: () {},
-      child: Text(
+      child: SelectableText(
         text,
         style: GoogleFonts.chivo(
             color: Colors.black, fontWeight: FontWeight.w600, fontSize: 15),
