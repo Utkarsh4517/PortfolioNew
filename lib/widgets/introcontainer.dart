@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newportfolio/widgets/iconcontainer.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'package:url_launcher/url_launcher_string.dart';
 class IntroContainer extends StatelessWidget {
   const IntroContainer({super.key});
 
@@ -69,7 +69,9 @@ class IntroContainer extends StatelessWidget {
                     child: Row(
                       children: [
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            launchGmail('shrivastava.utkarsh4517@gmail.com');
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.black,
                             elevation: 0,
@@ -182,7 +184,9 @@ class IntroContainer extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {launchGmail('shrivastava.utkarsh4517@gmail.com');
+                              launchGmail('shrivastava.utkarsh4517@gmail.com');
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.black,
                               elevation: 0,
@@ -242,4 +246,17 @@ class IntroContainer extends StatelessWidget {
             ),
           );
   }
+    launchGmail(String email) async {
+  final Uri params = Uri(
+    scheme: 'mailto',
+    path: email,
+    query: 'subject=Hello&body=Hi, this is my email',
+  );
+  String url = params.toString();
+  if (await canLaunchUrlString(url)) {
+    await launchUrlString(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
 }
