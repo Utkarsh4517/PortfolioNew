@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -129,16 +130,19 @@ class _ProjectContainerState extends State<ProjectContainer> {
                           onTap: () {
                             launchUrlString(widget.urlToLaunch);
                           },
-                          child: Container(
-                            width: 40,
-                            height: 40,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(20)),
-                            child: const Icon(
-                              FontAwesomeIcons.link,
-                              color: Colors.black,
-                              size: 15,
+                          child: FadeIn(
+                            duration: const Duration(milliseconds: 300),
+                            child: Container(
+                              width: 40,
+                              height: 40,
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(20)),
+                              child: const Icon(
+                                FontAwesomeIcons.github,
+                                color: Colors.black,
+                                size: 15,
+                              ),
                             ),
                           ),
                         ),
