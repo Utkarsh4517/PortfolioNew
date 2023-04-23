@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newportfolio/widgets/iconcontainer.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class IntroContainer extends StatelessWidget {
   const IntroContainer({super.key});
@@ -59,32 +60,55 @@ class IntroContainer extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 100,),
+                  const SizedBox(
+                    height: 100,
+                  ),
                   Container(
-                    width: 500,
-                    margin: const EdgeInsets.symmetric(horizontal: 40),
-                    child: Align(
-                      alignment: const AlignmentDirectional(-1, 0),
-                      child: Row(
-                        children: [
-                          ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.black,
-                              elevation: 0,
-                              padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 55),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(35),
-                              ),
-                            ),
-                            child: const Text(
-                              'Contact me',
-                              style: TextStyle(color: Colors.white),
+                    alignment: const AlignmentDirectional(-1, 0),
+                    margin: const EdgeInsets.only(left: 40),
+                    child: Row(
+                      children: [
+                        ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.black,
+                            elevation: 0,
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 23, horizontal: 50),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(35),
                             ),
                           ),
-                          const IconLink(icon: Icons.home, colorToChange: Colors.yellow)
-                        ],
-                      ),
+                          child: const Text(
+                            'Contact me',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        const IconLink(
+                            icon: FontAwesomeIcons.github,
+                            colorToChange: Colors.black),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        const IconLink(
+                            icon: FontAwesomeIcons.twitter,
+                            colorToChange: Colors.blue),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        const IconLink(
+                            icon: FontAwesomeIcons.linkedin,
+                            colorToChange: Color.fromARGB(255, 0, 54, 99)),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        const IconLink(
+                            icon: FontAwesomeIcons.dev,
+                            colorToChange: Colors.black),
+                      ],
                     ),
                   ),
                 ],

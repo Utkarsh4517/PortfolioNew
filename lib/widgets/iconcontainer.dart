@@ -28,18 +28,21 @@ class _IconLinkState extends State<IconLink> {
           isHovered = false;
         });
       },
-      child: ElevatedButton(
-        onPressed: () {},
-        style: ElevatedButton.styleFrom(
-          padding: const EdgeInsets.symmetric(vertical: 22,),
-          elevation: 0,
-          backgroundColor: isHovered ? widget.colorToChange : Colors.white,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(50),
+      child: SizedBox(
+        width: 45,
+        child: ElevatedButton(
+          onPressed: () {},
+          style: ElevatedButton.styleFrom(
+            padding: const EdgeInsets.symmetric(vertical: 18,),
+            elevation: 0,
+            backgroundColor: isHovered ? widget.colorToChange : Colors.white,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(50),
+            ),
           ),
-        ),
-        child: Icon(
-          widget.icon,
+          child: Icon(
+            widget.icon, color: isHovered? Colors.white: Colors.black,
+          ),
         ),
       ),
     );
