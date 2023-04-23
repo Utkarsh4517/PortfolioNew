@@ -11,7 +11,7 @@ class IntroContainer extends StatelessWidget {
         ? Expanded(
             child: Container(
               width: MediaQuery.of(context).size.width * 0.375,
-              height: 500,
+              height: 475,
               decoration: BoxDecoration(
                   gradient: const LinearGradient(
                     colors: [Color(0xfff7e4bf), Color(0xf2ebfff8)],
@@ -22,7 +22,9 @@ class IntroContainer extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20)),
               child: Column(
                 children: [
-                  const SizedBox(height: 50,),
+                  const SizedBox(
+                    height: 50,
+                  ),
                   Align(
                     alignment: const AlignmentDirectional(-1, 0),
                     child: Container(
@@ -38,7 +40,9 @@ class IntroContainer extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 60,),
+                  const SizedBox(
+                    height: 60,
+                  ),
                   Align(
                     alignment: const AlignmentDirectional(-1, 0),
                     child: Container(
@@ -54,13 +58,39 @@ class IntroContainer extends StatelessWidget {
                       ),
                     ),
                   ),
+                  const SizedBox(height: 100,),
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 40),
+                    child: Align(
+                      alignment: const AlignmentDirectional(-1, 0),
+                      child: Row(
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.black,
+                              elevation: 0,
+                              padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 55),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(35),
+                              ),
+                            ),
+                            child: const Text(
+                              'Contact me',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
           )
         : Container(
             width: MediaQuery.of(context).size.width * 0.7,
-            height: 500,
+            height: 475,
             decoration: BoxDecoration(
                 gradient: const LinearGradient(
                   colors: [Color(0xfff7e4bf), Color(0xf2ebfff8)],
