@@ -48,16 +48,16 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                     Row(
-                      children:  [
+                      children: [
                         const CustomTextButton(text: 'Home'),
                         SizedBox(
-                          width: screenWidth<455? screenWidth * 0.005 : 30,
+                          width: screenWidth < 455 ? screenWidth * 0.005 : 30,
                         ),
                         const CustomTextButton(
                           text: 'Projects',
                         ),
                         SizedBox(
-                          width: screenWidth<455? screenWidth * 0.005 : 30,
+                          width: screenWidth < 455 ? screenWidth * 0.005 : 30,
                         ),
                         const CustomTextButton(
                           text: 'Contact',
@@ -80,7 +80,9 @@ class HomePage extends StatelessWidget {
                           return Column(
                             children: const [
                               IntroContainer(),
-                              SizedBox(height: 30,),
+                              SizedBox(
+                                height: 30,
+                              ),
                               ProfileContainer(),
                             ],
                           );
@@ -88,14 +90,18 @@ class HomePage extends StatelessWidget {
                           return Row(
                             children: const [
                               IntroContainer(),
-                              SizedBox(width: 20,),
+                              SizedBox(
+                                width: 20,
+                              ),
                               ProfileContainer(),
                             ],
                           );
                         }
                       },
                     ),
-                    const SizedBox(height: 20,),
+                    const SizedBox(
+                      height: 20,
+                    ),
                     // PROJECT SECTION
                     LayoutBuilder(
                       builder:
@@ -103,48 +109,87 @@ class HomePage extends StatelessWidget {
                         if (constraints.maxWidth < 700) {
                           return Column(
                             children: const [
-                              ProjectContainer(image: brahma,),
-                              SizedBox(height: 30,),
-                              ProjectContainer(image: weather,),
-                              
+                              ProjectContainer(
+                                image: brahma,
+                                title: 'Brahma.ai',
+                                bodyText: 'GPT and Dall-E AI in one app',
+                              ),
+                              SizedBox(
+                                height: 30,
+                              ),
+                              ProjectContainer(
+                                image: weather,
+                                title: 'Weatherastic',
+                                bodyText: 'Weather app using openweather api',
+                              ),
                             ],
                           );
                         } else {
                           return Row(
                             children: const [
-                              ProjectContainer(image: brahma,),
-                              SizedBox(width: 30,),
-                              ProjectContainer(image: weather,),
+                              ProjectContainer(
+                                image: brahma,
+                                title: 'Brahma.ai',
+                                bodyText: 'GPT and Dall-E AI in one app',
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              ProjectContainer(
+                                image: weather,
+                                title: 'Weatherastic',
+                                bodyText: 'Weather app using openweather api',
+                              ),
                             ],
                           );
                         }
                       },
                     ),
-                    const SizedBox(height: 20,),
+                    const SizedBox(
+                      height: 20,
+                    ),
                     LayoutBuilder(
                       builder:
                           (BuildContext context, BoxConstraints constraints) {
                         if (constraints.maxWidth < 700) {
                           return Column(
                             children: const [
-                              ProjectContainer(image: twitter,),
-                              SizedBox(height: 30,),
-                              ProjectContainer(image: ecommerce,),
-                              
+                              ProjectContainer(
+                                title: 'Twitter clone',
+                                image: twitter,
+                                bodyText: 'Twitter clone using flutter and appwrite',
+                              ),
+                              SizedBox(
+                                height: 30,
+                              ),
+                              ProjectContainer(
+                                title: 'E-commerce app',
+                                image: ecommerce,
+                                bodyText: 'E-commerce app using flutter and node js',
+                              ),
                             ],
                           );
                         } else {
                           return Row(
                             children: const [
-                              ProjectContainer(image: twitter,),
-                              SizedBox(width: 30,),
-                              ProjectContainer(image: ecommerce,),
+                              ProjectContainer(
+                                title: 'Twitter clone',
+                                image: twitter,
+                                bodyText: 'Twitter clone using flutter and appwrite',
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              ProjectContainer(
+                                title: 'E-commerce app',
+                                image: ecommerce,
+                                bodyText: 'E-commerce app using flutter and node js',
+                              ),
                             ],
                           );
                         }
                       },
                     ),
-
                   ],
                 ),
               ],

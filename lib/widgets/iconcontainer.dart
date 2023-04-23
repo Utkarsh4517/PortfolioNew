@@ -32,13 +32,13 @@ class _IconLinkState extends State<IconLink> {
         });
       },
       child: SizedBox(
-        width: 50,
+        width: 45,
         child: ElevatedButton(
           onPressed: () {
             launchUrlString(widget.urlToLaunch);
           },
           style: ElevatedButton.styleFrom(
-            padding: const EdgeInsets.symmetric(vertical: 12,),
+            padding: const EdgeInsets.symmetric(vertical: 17,),
             elevation: 0,
             backgroundColor: isHovered ? widget.colorToChange : Colors.white,
             shape: RoundedRectangleBorder(

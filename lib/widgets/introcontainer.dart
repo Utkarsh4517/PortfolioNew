@@ -86,7 +86,7 @@ class IntroContainer extends StatelessWidget {
                         ),
 
                         const SizedBox(
-                          height: 10,
+                          width: 10,
                         ),
                         const IconLink(
                             urlToLaunch: 'https://github.com/Utkarsh4517',
