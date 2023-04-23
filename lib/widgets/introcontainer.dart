@@ -74,7 +74,7 @@ class IntroContainer extends StatelessWidget {
                             backgroundColor: Colors.black,
                             elevation: 0,
                             padding: const EdgeInsets.symmetric(
-                                vertical: 23, horizontal: 50),
+                                vertical: 20, horizontal: 50),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(35),
                             ),
@@ -84,8 +84,9 @@ class IntroContainer extends StatelessWidget {
                             style: TextStyle(color: Colors.white),
                           ),
                         ),
+
                         const SizedBox(
-                          width: 10,
+                          height: 10,
                         ),
                         const IconLink(
                             urlToLaunch: 'https://github.com/Utkarsh4517',
@@ -122,7 +123,7 @@ class IntroContainer extends StatelessWidget {
           )
         : Container(
             width: screenWidth * 0.9,
-            height: screenWidth < 455 ? screenWidth * 1.7 : screenWidth * 1.3,
+            height: screenWidth < 455 ? screenWidth * 1.3: screenWidth * 1.1,
             decoration: BoxDecoration(
                 gradient: const LinearGradient(
                   colors: [Color(0xfff7e4bf), Color(0xf2ebfff8)],
@@ -146,7 +147,7 @@ class IntroContainer extends StatelessWidget {
                       style: GoogleFonts.roboto(
                         color: Colors.black,
                         fontWeight: FontWeight.w600,
-                        fontSize: 35,
+                        fontSize: screenWidth<700? screenWidth*0.06: 35,
                       ),
                     ),
                   ),
@@ -164,7 +165,7 @@ class IntroContainer extends StatelessWidget {
                       style: GoogleFonts.roboto(
                         color: Colors.black,
                         fontWeight: FontWeight.w300,
-                        fontSize: 20,
+                        fontSize: screenWidth<700? screenWidth*0.04: 20,
                       ),
                     ),
                   ),
@@ -186,7 +187,7 @@ class IntroContainer extends StatelessWidget {
                               backgroundColor: Colors.black,
                               elevation: 0,
                               padding:  EdgeInsets.symmetric(
-                                  vertical: 23, horizontal: screenWidth * 0.3),
+                                  vertical: 20, horizontal: screenWidth * 0.25),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(35),
                               ),
@@ -198,38 +199,41 @@ class IntroContainer extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Row(
-                        children: const [
-                          SizedBox(
-                            width: 10,
-                          ),
-                          IconLink(
-                              urlToLaunch: 'https://github.com/Utkarsh4517',
-                              icon: FontAwesomeIcons.github,
-                              colorToChange: Colors.black),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          IconLink(
-                              urlToLaunch: 'https://twitter.com/codeittutkarsh',
-                              icon: FontAwesomeIcons.twitter,
-                              colorToChange: Colors.blue),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          IconLink(
-                              urlToLaunch:
-                                  'https://www.linkedin.com/in/utkarsh-shrivastava-7339041a0/',
-                              icon: FontAwesomeIcons.linkedin,
-                              colorToChange: Color.fromARGB(255, 0, 54, 99)),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          IconLink(
-                              urlToLaunch: 'https://dev.to/utkarsh4517',
-                              icon: FontAwesomeIcons.dev,
-                              colorToChange: Colors.black),
-                        ],
+                      const SizedBox(height: 20,),
+                      Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 30),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: const [
+                            
+                            IconLink(
+                                urlToLaunch: 'https://github.com/Utkarsh4517',
+                                icon: FontAwesomeIcons.github,
+                                colorToChange: Colors.black),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            IconLink(
+                                urlToLaunch: 'https://twitter.com/codeittutkarsh',
+                                icon: FontAwesomeIcons.twitter,
+                                colorToChange: Colors.blue),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            IconLink(
+                                urlToLaunch:
+                                    'https://www.linkedin.com/in/utkarsh-shrivastava-7339041a0/',
+                                icon: FontAwesomeIcons.linkedin,
+                                colorToChange: Color.fromARGB(255, 0, 54, 99)),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            IconLink(
+                                urlToLaunch: 'https://dev.to/utkarsh4517',
+                                icon: FontAwesomeIcons.dev,
+                                colorToChange: Colors.black),
+                          ],
+                        ),
                       )
                     ],
                   ),
