@@ -234,7 +234,7 @@ class IntroContainer extends StatelessWidget {
                                 colorToChange: Colors.black),
                           ],
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),

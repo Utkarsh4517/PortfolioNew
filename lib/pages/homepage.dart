@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newportfolio/constants/images.dart';
+import 'package:newportfolio/widgets/footercontainer.dart';
 import 'package:newportfolio/widgets/introcontainer.dart';
 import 'package:newportfolio/widgets/profilecontainer.dart';
 import 'package:newportfolio/widgets/projectcontainer.dart';
@@ -208,6 +209,8 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
+                const SizedBox(height: 30,),
+                const Footer()
               ],
             ),
           ),
