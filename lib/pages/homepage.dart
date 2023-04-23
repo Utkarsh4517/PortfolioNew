@@ -113,6 +113,8 @@ class HomePage extends StatelessWidget {
                                 image: brahma,
                                 title: 'Brahma.ai',
                                 bodyText: 'GPT and Dall-E AI in one app',
+                                titleColor: Colors.white,
+                                bodyTextColor: Color.fromARGB(255, 155, 155, 155),
                               ),
                               SizedBox(
                                 height: 30,
@@ -121,6 +123,8 @@ class HomePage extends StatelessWidget {
                                 image: weather,
                                 title: 'Weatherastic',
                                 bodyText: 'Weather app using openweather api',
+                                titleColor: Colors.white,
+                                bodyTextColor: Color.fromARGB(255, 155, 155, 155),
                               ),
                             ],
                           );
@@ -131,6 +135,8 @@ class HomePage extends StatelessWidget {
                                 image: brahma,
                                 title: 'Brahma.ai',
                                 bodyText: 'GPT and Dall-E AI in one app',
+                                titleColor: Colors.white,
+                                bodyTextColor: Color.fromARGB(255, 155, 155, 155),
                               ),
                               SizedBox(
                                 width: 30,
@@ -139,6 +145,8 @@ class HomePage extends StatelessWidget {
                                 image: weather,
                                 title: 'Weatherastic',
                                 bodyText: 'Weather app using openweather api',
+                                titleColor: Colors.white,
+                                bodyTextColor: Color.fromARGB(255, 155, 155, 155),
                               ),
                             ],
                           );
@@ -158,6 +166,8 @@ class HomePage extends StatelessWidget {
                                 title: 'Twitter clone',
                                 image: twitter,
                                 bodyText: 'Twitter clone using flutter and appwrite',
+                                titleColor: Colors.black,
+                                bodyTextColor: Color.fromARGB(255, 51, 51, 51),
                               ),
                               SizedBox(
                                 height: 30,
@@ -166,6 +176,8 @@ class HomePage extends StatelessWidget {
                                 title: 'E-commerce app',
                                 image: ecommerce,
                                 bodyText: 'E-commerce app using flutter and node js',
+                                titleColor: Colors.black,
+                                bodyTextColor: Color.fromARGB(255, 51, 51, 51),
                               ),
                             ],
                           );
@@ -176,6 +188,8 @@ class HomePage extends StatelessWidget {
                                 title: 'Twitter clone',
                                 image: twitter,
                                 bodyText: 'Twitter clone using flutter and appwrite',
+                                titleColor: Colors.black,
+                                bodyTextColor: Color.fromARGB(255, 51, 51, 51),
                               ),
                               SizedBox(
                                 width: 30,
@@ -184,6 +198,8 @@ class HomePage extends StatelessWidget {
                                 title: 'E-commerce app',
                                 image: ecommerce,
                                 bodyText: 'E-commerce app using flutter and node js',
+                                titleColor: Colors.black,
+                                bodyTextColor: Color.fromARGB(255, 51, 51, 51),
                               ),
                             ],
                           );

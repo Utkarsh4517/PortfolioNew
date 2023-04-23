@@ -5,11 +5,15 @@ import 'package:newportfolio/constants/images.dart';
 class ProjectContainer extends StatefulWidget {
   final String image;
   final String title;
+  final Color titleColor;
   final String bodyText;
+  final Color bodyTextColor;
   const ProjectContainer(
       {required this.image,
       required this.bodyText,
       required this.title,
+      required this.bodyTextColor,
+      required this.titleColor,
       super.key});
 
   @override
@@ -52,24 +56,24 @@ class _ProjectContainerState extends State<ProjectContainer> {
                         height: screenWidth * 0.7,
                       ),
                       Positioned(
-                        left: 10,
-                        top: 10,
+                        left: 20,
+                        top: 20,
                         child: Text(
                           widget.title,
                           style: GoogleFonts.chivo(
-                            color: Colors.white,
+                            color: widget.titleColor,
                             fontSize: 20,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
                       ),
                       Positioned(
-                        left: 10,
-                        top: 40,
+                        left: 20,
+                        top: 50,
                         child: Text(
                           widget.bodyText,
                           style: GoogleFonts.chivo(
-                            color: Colors.white,
+                            color: widget.bodyTextColor,
                             fontSize: 10,
                             fontWeight: FontWeight.w400,
                           ),
@@ -84,24 +88,24 @@ class _ProjectContainerState extends State<ProjectContainer> {
                       height: screenWidth < 1100 ? screenWidth * 0.45 : 500,
                     ),
                     Positioned(
-                      left: 10,
-                      top: 10,
+                      left: 20,
+                      top: 20,
                       child: Text(
                         widget.title,
                         style: GoogleFonts.chivo(
-                          color: Colors.white,
+                          color: widget.titleColor,
                           fontSize: 20,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
                     ),
                     Positioned(
-                        left: 10,
-                        top: 40,
+                        left: 20,
+                        top: 50,
                         child: Text(
                           widget.bodyText,
                           style: GoogleFonts.chivo(
-                            color: Colors.white,
+                            color: widget.bodyTextColor,
                             fontSize: 10,
                             fontWeight: FontWeight.w400,
                           ),
