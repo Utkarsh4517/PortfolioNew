@@ -8,15 +8,22 @@ import 'package:newportfolio/widgets/profilecontainer.dart';
 import 'package:newportfolio/widgets/projectcontainer.dart';
 import 'package:newportfolio/widgets/textbutton.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  ScrollController _scrollController = ScrollController();
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
+        controller: _scrollController,
         child: Align(
           alignment: const AlignmentDirectional(0, 0),
           child: Container(
@@ -49,7 +56,7 @@ class HomePage extends StatelessWidget {
                         )
                       ],
                     ),
-                    Row(
+                  /*  Row(
                       children: [
                         const CustomTextButton(text: 'Home'),
                         SizedBox(
@@ -66,6 +73,7 @@ class HomePage extends StatelessWidget {
                         )
                       ],
                     )
+                    */
                   ],
                 ),
                 // END OF TOP ROW

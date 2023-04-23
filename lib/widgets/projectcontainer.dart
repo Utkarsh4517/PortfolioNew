@@ -52,12 +52,13 @@ class _ProjectContainerState extends State<ProjectContainer> {
           transform: transform,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
-            child: screenWidth < 700
+            child:screenWidth < 700
                 ? GestureDetector(
                     onTap: () {
                       launchUrlString(widget.urlToLaunch);
                     },
                     child: Stack(
+                      
                       children: [
                         Image.asset(
                           widget.image,
