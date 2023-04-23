@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newportfolio/constants/images.dart';
@@ -79,12 +80,18 @@ class HomePage extends StatelessWidget {
                           (BuildContext context, BoxConstraints constraints) {
                         if (constraints.maxWidth < 700) {
                           return Column(
-                            children: const [
-                              ProfileContainer(),
-                              SizedBox(
+                            children: [
+                              FadeIn(
+                                child: const ProfileContainer(),
+                              ),
+                              const SizedBox(
                                 height: 30,
                               ),
-                              IntroContainer(),
+                              FadeIn(
+                                delay: const Duration(milliseconds: 200),
+                                duration: const Duration(milliseconds: 1000),
+                                child: const IntroContainer(),
+                              ),
                             ],
                           );
                         } else {
@@ -109,49 +116,65 @@ class HomePage extends StatelessWidget {
                           (BuildContext context, BoxConstraints constraints) {
                         if (constraints.maxWidth < 700) {
                           return Column(
-                            children: const [
-                              ProjectContainer(
-                                image: brahma,
-                                title: 'Brahma.ai',
-                                bodyText: 'GPT and Dall-E AI in one app',
-                                titleColor: Colors.white,
-                                bodyTextColor:
-                                    Color.fromARGB(255, 155, 155, 155),
+                            children: [
+                              FadeIn(
+                                delay: const Duration(milliseconds: 300),
+                                duration: const Duration(milliseconds: 1000),
+                                child: const ProjectContainer(
+                                  image: brahma,
+                                  title: 'Brahma.ai',
+                                  bodyText: 'GPT and Dall-E AI in one app',
+                                  titleColor: Colors.white,
+                                  bodyTextColor:
+                                      Color.fromARGB(255, 155, 155, 155),
+                                ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 30,
                               ),
-                              ProjectContainer(
-                                image: weather,
-                                title: 'Weatherastic',
-                                bodyText: 'Weather app using openweather api',
-                                titleColor: Colors.white,
-                                bodyTextColor:
-                                    Color.fromARGB(255, 155, 155, 155),
+                              FadeIn(
+                                delay: const Duration(milliseconds: 300),
+                                duration: const Duration(milliseconds: 1000),
+                                child: const ProjectContainer(
+                                  image: weather,
+                                  title: 'Weatherastic',
+                                  bodyText: 'Weather app using openweather api',
+                                  titleColor: Colors.white,
+                                  bodyTextColor:
+                                      Color.fromARGB(255, 155, 155, 155),
+                                ),
                               ),
                             ],
                           );
                         } else {
                           return Row(
-                            children: const [
-                              ProjectContainer(
-                                image: brahma,
-                                title: 'Brahma.ai',
-                                bodyText: 'GPT and Dall-E AI in one app',
-                                titleColor: Colors.white,
-                                bodyTextColor:
-                                    Color.fromARGB(255, 155, 155, 155),
+                            children: [
+                              FadeIn(
+                                delay: const Duration(milliseconds: 300),
+                                duration: const Duration(milliseconds: 1000),
+                                child: const ProjectContainer(
+                                  image: brahma,
+                                  title: 'Brahma.ai',
+                                  bodyText: 'GPT and Dall-E AI in one app',
+                                  titleColor: Colors.white,
+                                  bodyTextColor:
+                                      Color.fromARGB(255, 155, 155, 155),
+                                ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 30,
                               ),
-                              ProjectContainer(
-                                image: weather,
-                                title: 'Weatherastic',
-                                bodyText: 'Weather app using openweather api',
-                                titleColor: Colors.white,
-                                bodyTextColor:
-                                    Color.fromARGB(255, 155, 155, 155),
+                              FadeIn(
+                                delay: const Duration(milliseconds: 300),
+                                duration: const Duration(milliseconds: 1000),
+                                child: const ProjectContainer(
+                                  image: weather,
+                                  title: 'Weatherastic',
+                                  bodyText: 'Weather app using openweather api',
+                                  titleColor: Colors.white,
+                                  bodyTextColor:
+                                      Color.fromARGB(255, 155, 155, 155),
+                                ),
                               ),
                             ],
                           );
@@ -166,49 +189,68 @@ class HomePage extends StatelessWidget {
                           (BuildContext context, BoxConstraints constraints) {
                         if (constraints.maxWidth < 700) {
                           return Column(
-                            children: const [
-                              ProjectContainer(
-                                title: 'Twitter clone',
-                                image: twitter,
-                                bodyText:
-                                    'Twitter clone using flutter and appwrite',
-                                titleColor: Colors.black,
-                                bodyTextColor: Color.fromARGB(255, 51, 51, 51),
+                            children: [
+                              FadeIn(
+                                delay: const Duration(milliseconds: 500),
+                                duration: const Duration(milliseconds: 1000),
+                                child: const ProjectContainer(
+                                  title: 'Twitter clone',
+                                  image: twitter,
+                                  bodyText:
+                                      'Twitter clone using flutter and appwrite',
+                                  titleColor: Colors.black,
+                                  bodyTextColor:
+                                      Color.fromARGB(255, 51, 51, 51),
+                                ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 30,
                               ),
-                              ProjectContainer(
-                                title: 'E-commerce app',
-                                image: ecommerce,
-                                bodyText:
-                                    'E-commerce app using flutter and node js',
-                                titleColor: Colors.black,
-                                bodyTextColor: Color.fromARGB(255, 51, 51, 51),
+                              FadeIn(
+                                delay: const Duration(milliseconds: 500),
+                                duration: const Duration(milliseconds: 1000),
+                                child: const ProjectContainer(
+                                  title: 'E-commerce app',
+                                  image: ecommerce,
+                                  bodyText:
+                                      'E-commerce app using flutter and node js',
+                                  titleColor: Colors.black,
+                                  bodyTextColor:
+                                      Color.fromARGB(255, 51, 51, 51),
+                                ),
                               ),
                             ],
                           );
                         } else {
                           return Row(
-                            children: const [
-                              ProjectContainer(
-                                title: 'Twitter clone',
-                                image: twitter,
-                                bodyText:
-                                    'Twitter clone using flutter and appwrite',
-                                titleColor: Colors.black,
-                                bodyTextColor: Color.fromARGB(255, 51, 51, 51),
+                            children: [
+                              FadeIn(
+                                delay: const Duration(milliseconds: 500),
+                                duration: const Duration(milliseconds: 1000),
+                                child: const ProjectContainer(
+                                  title: 'Twitter clone',
+                                  image: twitter,
+                                  bodyText:
+                                      'Twitter clone using flutter and appwrite',
+                                  titleColor: Colors.black,
+                                  bodyTextColor:
+                                      Color.fromARGB(255, 51, 51, 51),
+                                ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 30,
                               ),
-                              ProjectContainer(
-                                title: 'E-commerce app',
-                                image: ecommerce,
-                                bodyText:
-                                    'E-commerce app using flutter and node js',
-                                titleColor: Colors.black,
-                                bodyTextColor: Color.fromARGB(255, 51, 51, 51),
+                              FadeIn(
+                                delay: const Duration(milliseconds: 500),
+                                duration: const Duration(milliseconds: 1000),
+                                child: const ProjectContainer(
+                                  title: 'E-commerce app',
+                                  image: ecommerce,
+                                  bodyText:
+                                      'E-commerce app using flutter and node js',
+                                  titleColor: Colors.black,
+                                  bodyTextColor: Color.fromARGB(255, 51, 51, 51),
+                                ),
                               ),
                             ],
                           );
