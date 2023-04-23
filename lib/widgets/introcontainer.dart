@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:newportfolio/widgets/iconcontainer.dart';
 
 class IntroContainer extends StatelessWidget {
   const IntroContainer({super.key});
@@ -60,6 +61,7 @@ class IntroContainer extends StatelessWidget {
                   ),
                   const SizedBox(height: 100,),
                   Container(
+                    width: 500,
                     margin: const EdgeInsets.symmetric(horizontal: 40),
                     child: Align(
                       alignment: const AlignmentDirectional(-1, 0),
@@ -80,6 +82,7 @@ class IntroContainer extends StatelessWidget {
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
+                          const IconLink(icon: Icons.home, colorToChange: Colors.yellow)
                         ],
                       ),
                     ),
