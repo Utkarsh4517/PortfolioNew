@@ -48,18 +48,18 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                     Row(
-                      children: const [
-                        CustomTextButton(text: 'Home'),
+                      children:  [
+                        const CustomTextButton(text: 'Home'),
                         SizedBox(
-                          width: 30,
+                          width: screenWidth<455? screenWidth * 0.005 : 30,
                         ),
-                        CustomTextButton(
+                        const CustomTextButton(
                           text: 'Projects',
                         ),
                         SizedBox(
-                          width: 30,
+                          width: screenWidth<455? screenWidth * 0.005 : 30,
                         ),
-                        CustomTextButton(
+                        const CustomTextButton(
                           text: 'Contact',
                         )
                       ],
@@ -76,7 +76,7 @@ class HomePage extends StatelessWidget {
                     LayoutBuilder(
                       builder:
                           (BuildContext context, BoxConstraints constraints) {
-                        if (constraints.maxWidth < 600) {
+                        if (constraints.maxWidth < 700) {
                           return Column(
                             children: const [
                               IntroContainer(),

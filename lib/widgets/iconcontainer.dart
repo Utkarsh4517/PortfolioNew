@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class IconLink extends StatefulWidget {
+  final String urlToLaunch;
   final IconData icon;
   final Color colorToChange;
   const IconLink({
+    required this.urlToLaunch,
     required this.icon,
     required this.colorToChange,
     super.key,
@@ -31,7 +34,9 @@ class _IconLinkState extends State<IconLink> {
       child: SizedBox(
         width: 45,
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            launchUrlString(widget.urlToLaunch);
+          },
           style: ElevatedButton.styleFrom(
             padding: const EdgeInsets.symmetric(vertical: 18,),
             elevation: 0,

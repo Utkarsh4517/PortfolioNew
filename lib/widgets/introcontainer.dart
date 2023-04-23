@@ -9,7 +9,7 @@ class IntroContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    return screenWidth > 600
+    return screenWidth > 700
         ? Expanded(
             child: Container(
               width: MediaQuery.of(context).size.width * 0.375,
@@ -60,8 +60,8 @@ class IntroContainer extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    height: 100,
+                  SizedBox(
+                    height: screenWidth < 1100 ? screenWidth * 0.05 : 100,
                   ),
                   Container(
                     alignment: const AlignmentDirectional(-1, 0),
@@ -88,24 +88,29 @@ class IntroContainer extends StatelessWidget {
                           width: 10,
                         ),
                         const IconLink(
+                            urlToLaunch: 'https://github.com/Utkarsh4517',
                             icon: FontAwesomeIcons.github,
                             colorToChange: Colors.black),
                         const SizedBox(
                           width: 10,
                         ),
                         const IconLink(
+                            urlToLaunch: 'https://twitter.com/codeittutkarsh',
                             icon: FontAwesomeIcons.twitter,
                             colorToChange: Colors.blue),
                         const SizedBox(
                           width: 10,
                         ),
                         const IconLink(
+                            urlToLaunch:
+                                'https://www.linkedin.com/in/utkarsh-shrivastava-7339041a0/',
                             icon: FontAwesomeIcons.linkedin,
                             colorToChange: Color.fromARGB(255, 0, 54, 99)),
                         const SizedBox(
                           width: 10,
                         ),
                         const IconLink(
+                            urlToLaunch: 'https://dev.to/utkarsh4517',
                             icon: FontAwesomeIcons.dev,
                             colorToChange: Colors.black),
                       ],
@@ -116,8 +121,8 @@ class IntroContainer extends StatelessWidget {
             ),
           )
         : Container(
-            width: MediaQuery.of(context).size.width * 0.7,
-            height: 475,
+            width: screenWidth * 0.9,
+            height: screenWidth < 455 ? screenWidth * 1.7 : screenWidth * 1.3,
             decoration: BoxDecoration(
                 gradient: const LinearGradient(
                   colors: [Color(0xfff7e4bf), Color(0xf2ebfff8)],
@@ -126,6 +131,111 @@ class IntroContainer extends StatelessWidget {
                   end: Alignment.bottomLeft,
                 ),
                 borderRadius: BorderRadius.circular(20)),
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 50,
+                ),
+                Align(
+                  alignment: const AlignmentDirectional(-1, 0),
+                  child: Container(
+                    width: 600,
+                    padding: const EdgeInsets.only(left: 40, right: 10),
+                    child: Text(
+                      "Hello, I'm Utkarsh, a passionate Flutter developer and an open-source enthusiast",
+                      style: GoogleFonts.roboto(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 35,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 60,
+                ),
+                Align(
+                  alignment: const AlignmentDirectional(-1, 0),
+                  child: Container(
+                    width: 700,
+                    padding: const EdgeInsets.only(left: 40, right: 10),
+                    child: Text(
+                      "I care a lot about using design for positive impact. and enjoy creating user-centric, delightful, and human experiences.",
+                      style: GoogleFonts.roboto(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w300,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ),
+                ),
+                 SizedBox(
+                  height: screenWidth * 0.08,
+                ),
+                Container(
+                  alignment: const AlignmentDirectional(-1, 0),
+                  //margin: const EdgeInsets.only(left: 40),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.black,
+                              elevation: 0,
+                              padding:  EdgeInsets.symmetric(
+                                  vertical: 23, horizontal: screenWidth * 0.3),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(35),
+                              ),
+                            ),
+                            child: const Text(
+                              'Contact me',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBox(
+                            width: 10,
+                          ),
+                          IconLink(
+                              urlToLaunch: 'https://github.com/Utkarsh4517',
+                              icon: FontAwesomeIcons.github,
+                              colorToChange: Colors.black),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          IconLink(
+                              urlToLaunch: 'https://twitter.com/codeittutkarsh',
+                              icon: FontAwesomeIcons.twitter,
+                              colorToChange: Colors.blue),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          IconLink(
+                              urlToLaunch:
+                                  'https://www.linkedin.com/in/utkarsh-shrivastava-7339041a0/',
+                              icon: FontAwesomeIcons.linkedin,
+                              colorToChange: Color.fromARGB(255, 0, 54, 99)),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          IconLink(
+                              urlToLaunch: 'https://dev.to/utkarsh4517',
+                              icon: FontAwesomeIcons.dev,
+                              colorToChange: Colors.black),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ),
           );
   }
 }
