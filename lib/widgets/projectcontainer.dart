@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newportfolio/constants/images.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class ProjectContainer extends StatefulWidget {
   final String image;
@@ -8,8 +10,10 @@ class ProjectContainer extends StatefulWidget {
   final Color titleColor;
   final String bodyText;
   final Color bodyTextColor;
+  final String urlToLaunch;
   const ProjectContainer(
       {required this.image,
+      required this.urlToLaunch,
       required this.bodyText,
       required this.title,
       required this.bodyTextColor,
@@ -48,38 +52,43 @@ class _ProjectContainerState extends State<ProjectContainer> {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: screenWidth < 700
-                ? Stack(
-                    children: [
-                      Image.asset(
-                        widget.image,
-                        width: screenWidth * 0.7,
-                        height: screenWidth * 0.7,
-                      ),
-                      Positioned(
-                        left: 20,
-                        top: 20,
-                        child: Text(
-                          widget.title,
-                          style: GoogleFonts.chivo(
-                            color: widget.titleColor,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
+                ? GestureDetector(
+                    onTap: () {
+                      launchUrlString(widget.urlToLaunch);
+                    },
+                    child: Stack(
+                      children: [
+                        Image.asset(
+                          widget.image,
+                          width: screenWidth * 0.7,
+                          height: screenWidth * 0.7,
+                        ),
+                        Positioned(
+                          left: 20,
+                          top: 20,
+                          child: Text(
+                            widget.title,
+                            style: GoogleFonts.chivo(
+                              color: widget.titleColor,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        left: 20,
-                        top: 50,
-                        child: Text(
-                          widget.bodyText,
-                          style: GoogleFonts.chivo(
-                            color: widget.bodyTextColor,
-                            fontSize: 10,
-                            fontWeight: FontWeight.w400,
+                        Positioned(
+                          left: 20,
+                          top: 50,
+                          child: Text(
+                            widget.bodyText,
+                            style: GoogleFonts.chivo(
+                              color: widget.bodyTextColor,
+                              fontSize: 10,
+                              fontWeight: FontWeight.w400,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   )
                 : Stack(children: [
                     Image.asset(
@@ -100,17 +109,41 @@ class _ProjectContainerState extends State<ProjectContainer> {
                       ),
                     ),
                     Positioned(
-                        left: 20,
-                        top: 50,
-                        child: Text(
-                          widget.bodyText,
-                          style: GoogleFonts.chivo(
-                            color: widget.bodyTextColor,
-                            fontSize: 10,
-                            fontWeight: FontWeight.w400,
+                      left: 20,
+                      top: 50,
+                      child: Text(
+                        widget.bodyText,
+                        style: GoogleFonts.chivo(
+                          color: widget.bodyTextColor,
+                          fontSize: 10,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ),
+                    Visibility(
+                      visible: isHovered,
+                      child: Positioned(
+                        right: 20,
+                        top: 20,
+                        child: GestureDetector(
+                          onTap: () {
+                            launchUrlString(widget.urlToLaunch);
+                          },
+                          child: Container(
+                            width: 40,
+                            height: 40,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(20)),
+                            child: const Icon(
+                              FontAwesomeIcons.link,
+                              color: Colors.black,
+                              size: 15,
+                            ),
                           ),
                         ),
                       ),
+                    )
                   ]),
           ),
         ),

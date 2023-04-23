@@ -127,6 +127,8 @@ class HomePage extends StatelessWidget {
                                   titleColor: Colors.white,
                                   bodyTextColor:
                                       Color.fromARGB(255, 155, 155, 155),
+                                  urlToLaunch:
+                                      'https://github.com/Utkarsh4517/Brahma-ChatGPT-Dall-E-Flutter',
                                 ),
                               ),
                               const SizedBox(
@@ -142,6 +144,8 @@ class HomePage extends StatelessWidget {
                                   titleColor: Colors.white,
                                   bodyTextColor:
                                       Color.fromARGB(255, 155, 155, 155),
+                                  urlToLaunch:
+                                      'https://github.com/Utkarsh4517/Weatherastic',
                                 ),
                               ),
                             ],
@@ -159,6 +163,8 @@ class HomePage extends StatelessWidget {
                                   titleColor: Colors.white,
                                   bodyTextColor:
                                       Color.fromARGB(255, 155, 155, 155),
+                                  urlToLaunch:
+                                      'https://github.com/Utkarsh4517/Brahma-ChatGPT-Dall-E-Flutter',
                                 ),
                               ),
                               const SizedBox(
@@ -174,6 +180,8 @@ class HomePage extends StatelessWidget {
                                   titleColor: Colors.white,
                                   bodyTextColor:
                                       Color.fromARGB(255, 155, 155, 155),
+                                  urlToLaunch:
+                                      'https://github.com/Utkarsh4517/Weatherastic',
                                 ),
                               ),
                             ],
@@ -201,6 +209,8 @@ class HomePage extends StatelessWidget {
                                   titleColor: Colors.black,
                                   bodyTextColor:
                                       Color.fromARGB(255, 51, 51, 51),
+                                  urlToLaunch:
+                                      'https://github.com/Utkarsh4517/Twitter-Clone',
                                 ),
                               ),
                               const SizedBox(
@@ -217,6 +227,8 @@ class HomePage extends StatelessWidget {
                                   titleColor: Colors.black,
                                   bodyTextColor:
                                       Color.fromARGB(255, 51, 51, 51),
+                                  urlToLaunch:
+                                      'https://github.com/Utkarsh4517/Flutter_E-commerce',
                                 ),
                               ),
                             ],
@@ -235,6 +247,8 @@ class HomePage extends StatelessWidget {
                                   titleColor: Colors.black,
                                   bodyTextColor:
                                       Color.fromARGB(255, 51, 51, 51),
+                                  urlToLaunch:
+                                      'https://github.com/Utkarsh4517/Twitter-Clone',
                                 ),
                               ),
                               const SizedBox(
@@ -249,7 +263,10 @@ class HomePage extends StatelessWidget {
                                   bodyText:
                                       'E-commerce app using flutter and node js',
                                   titleColor: Colors.black,
-                                  bodyTextColor: Color.fromARGB(255, 51, 51, 51),
+                                  bodyTextColor:
+                                      Color.fromARGB(255, 51, 51, 51),
+                                  urlToLaunch:
+                                      'https://github.com/Utkarsh4517/Flutter_E-commerce',
                                 ),
                               ),
                             ],
