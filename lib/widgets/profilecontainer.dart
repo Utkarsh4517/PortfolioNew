@@ -8,14 +8,14 @@ class ProfileContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    return screenWidth > 600? Container(
+    return screenWidth > 700? Container(
       width: screenWidth < 1200? MediaQuery.of(context).size.width * 0.27 : 330,
       height: 475,
       decoration: BoxDecoration(
           color: Colors.amberAccent, borderRadius: BorderRadius.circular(20)),
           child: const RiveAnimation.asset(riveanim) //Lottie.network('https://assets8.lottiefiles.com/packages/lf20_kkflmtur.json'),
     ) : Container(
-      width: MediaQuery.of(context).size.width * 0.7,
+      width: MediaQuery.of(context).size.width * 0.8,
       height: 475,
       decoration: BoxDecoration(
           color: Colors.amberAccent, borderRadius: BorderRadius.circular(20)),

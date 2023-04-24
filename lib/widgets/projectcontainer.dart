@@ -55,15 +55,23 @@ class _ProjectContainerState extends State<ProjectContainer> {
             child:screenWidth < 700
                 ? GestureDetector(
                     onTap: () {
-                      launchUrlString(widget.urlToLaunch);
+                      //launchUrlString(widget.urlToLaunch);
+                      setState(() {
+                        isHovered = true;
+                      });
+                    },
+                    onDoubleTap: (){
+                      setState(() {
+                        isHovered = false;
+                      });
                     },
                     child: Stack(
                       
                       children: [
                         Image.asset(
                           widget.image,
-                          width: screenWidth * 0.7,
-                          height: screenWidth * 0.7,
+                          width: screenWidth * 0.8,
+                          height: screenWidth * 0.8,
                         ),
                         Positioned(
                           left: 20,
@@ -88,6 +96,33 @@ class _ProjectContainerState extends State<ProjectContainer> {
                               fontWeight: FontWeight.w400,
                             ),
                           ),
+                        ),
+                        Visibility(
+                          visible: isHovered,
+                          child: Positioned(
+                          right: 20,
+                          top: 20,
+                          child: GestureDetector(
+                            onTap: () {
+                              launchUrlString(widget.urlToLaunch);
+                            },
+                            child: FadeIn(
+                              duration: const Duration(milliseconds: 300),
+                              child: Container(
+                                width: 40,
+                                height: 40,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(20)),
+                                child: const Icon(
+                                  FontAwesomeIcons.github,
+                                  color: Colors.black,
+                                  size: 15,
+                                ),
+                              ),
+                            ),
+                          ),
+                                              ),
                         ),
                       ],
                     ),
